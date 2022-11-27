@@ -19,7 +19,6 @@ services:
     image: paulhenrique/electrosfi-backend:${VERSION}
     restart: always
     container_name: electrosfi-backend-prod
-    build: .
     ports:
       - "5002:3000"
     environment:
@@ -28,7 +27,6 @@ services:
   simulator:
     image: paulhenrique/electrosfi-simulator:${VERSION}
     container_name: electrosfi-simulator
-    build: .
     ports:
       - "3015:3000"
     environment:
@@ -41,7 +39,6 @@ services:
     image: paulhenrique/electrosfi-ui:${VERSION}
     restart: always
     container_name: electrosfi-ui
-    build: .
     ports:
       - "3002:3002"
     environment:
