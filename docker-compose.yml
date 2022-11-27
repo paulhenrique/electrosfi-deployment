@@ -32,8 +32,6 @@ services:
     environment:
       - PORT=3015
     volumes:
-      - "./util:/util"
-      - "./routes/index.js:/routes/index.js"
       - "./storage/users:/storage/users:rw"
   web:
     image: paulhenrique/electrosfi-ui:${VERSION}
